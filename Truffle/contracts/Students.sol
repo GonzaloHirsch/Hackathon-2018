@@ -30,11 +30,19 @@ contract StudentsContract {
     university.students.push(Student(studentAddress, name, SubjectData[], SubjectData[], university));
   }
 
-  //TODO function to create subject data
-  function CreateSubjectData(Student student, Subject subject, uint universityId, uint8 grade) external {
+  /*
+    Function that creates a new subjectData and adds it to the students currentSubject.
+  */
+  function CreateSubjectData(address studentAddress, uint subjectId, uint universityId, uint8 grade) internal{
     require(allUniversities[universityId] != 0);
-    require(university.subjects[]);
+    require(allUniversities[universityId].subjects[subjectId] != 0);
+    require(allUniversities[universityId].walletToStudent[studentAddress] != 0);
 
+    Subject aux = allUniversities[universityId].subjects[subjectId];
+    University auxUni = allUniversities[universityId];
+
+    //Adds the subjectData to the currentSubjects array;
+    allUniversities[universityId].walletToStudent[studentAddress].currentSubjects.push(SubjectData(aux.name, auxUni, 0));
   }
 
 }
