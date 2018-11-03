@@ -3,9 +3,7 @@ contract DecentralizedUniversity {
     return University(_address).test();
   }
 
-}
 
-contract Subject {
 	struct Subject{
 		address owner;
 		string name;
@@ -16,7 +14,6 @@ contract Subject {
 	}
 }
 
-contract Student {
 	struct Student{
 		address owner;
 		string name;
@@ -24,6 +21,7 @@ contract Student {
 		SubjectData[] attendedSubjects;
     	SubjectData[] currentSubjects;
 	}
+
 	struct SubjectData{
 		string name;
 		University university;
@@ -33,6 +31,7 @@ contract Student {
 		Creates a new student and adds it to the university array of students
 	*/
 	function CreateNewStudent(address _address, string _name, uint _universityId) external {
+<<<<<<< HEAD
 		require(allUniversities[_universityId] != 0);
 		require(msg.sender == allUniversities[_universityId].owner);
 
@@ -49,18 +48,21 @@ contract Student {
 		University auxUniversity = allUniversities[_universityId];
 		Subject auxSubject = auxUniversity.subjects[_subjectId];
 		auxUniversity.walletToStudent[_studentAddress].currentSubjects.push(SubjectData(auxSubject.name, auxUniversity, 0));
+=======
+
+>>>>>>> ebe7ec2d7dff93279bc2f51ea2b7a16a7dfb5eed
 	}
 }
 
-contract University {
 
-  function test() pure public returns(string) {
-    return "IT MOTHER FUCKING WORKED";
   }
 
 }
 
+<<<<<<< HEAD
 contract AdministratorContract {
+=======
+>>>>>>> ebe7ec2d7dff93279bc2f51ea2b7a16a7dfb5eed
 
   University[] allUniversities;
   uint universityCount = 0;
@@ -80,7 +82,5 @@ contract AdministratorContract {
   }
 
   function CreateUniversity(address _owner, string _name) external {
-  	allUniversities[universityCount] = University(_owner, universityCount, new Subject[], 0, _name, new mapping (address => Student));
-  	universityCount++;
   }
 }
