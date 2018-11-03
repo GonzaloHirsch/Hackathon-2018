@@ -39,7 +39,6 @@ contract StudentContract {
 		Creates a new student and adds it to the university array of students
 	*/
 	function CreateNewStudent(address _address, string _name, uint _universityId) external {
-<<<<<<< HEAD
 		require(allUniversities[_universityId] != 0);
 		require(msg.sender == allUniversities[_universityId].owner);
 
@@ -56,9 +55,6 @@ contract StudentContract {
 		University auxUniversity = allUniversities[_universityId];
 		Subject auxSubject = auxUniversity.subjects[_subjectId];
 		auxUniversity.walletToStudent[_studentAddress].currentSubjects.push(SubjectData(auxSubject.name, auxUniversity, 0));
-=======
-
->>>>>>> ebe7ec2d7dff93279bc2f51ea2b7a16a7dfb5eed
 	}
 }
 
@@ -71,11 +67,8 @@ contract UniversityContract {
 
 }
 
-<<<<<<< HEAD
+
 contract AdministratorContract {
-=======
-contract Administrator {
->>>>>>> ebe7ec2d7dff93279bc2f51ea2b7a16a7dfb5eed
 
   University[] allUniversities;
   uint universityCount = 0;
