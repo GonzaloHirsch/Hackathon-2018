@@ -26,13 +26,13 @@ contract StudentsContract {
   */
   function CreateNewStudent(address studentAddress, string name, uint universityId) external {
     //Check if the university is the one trying to create it
-    require(msg.sender == uniMap[universityId]);
+    require(msg.sender == allUniversities[universityId].owner);
     university.students.push(Student(studentAddress, name, SubjectData[], SubjectData[], university));
   }
 
   //TODO function to create subject data
-  function CreateSubjectData(Student student, Subject subject, University university, uint8 grade) external {
-    require(uniMap[university.owner] != 0);
+  function CreateSubjectData(Student student, Subject subject, uint universityId, uint8 grade) external {
+    require(allUniversities[universityId] != 0);
     require(university.subjects[]);
 
   }
