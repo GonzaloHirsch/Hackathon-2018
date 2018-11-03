@@ -6,21 +6,6 @@ import "./Administrator.sol";
 import "./Structures.sol";
 
 contract StudentsContract {
-
-  struct Student {
-    address owner;
-    string name;
-    SubjectData[] attendedSubjects;
-    SubjectData[] currentSubjects;
-    University university;
-  }
-
-  struct SubjectData {
-    string name;
-    University university;
-    uint8 grade;
-  }
-
   /*
     Function that creates a new student and adds it to the students of the university given
     Verifies if the sender is the university where it is going to be stored
