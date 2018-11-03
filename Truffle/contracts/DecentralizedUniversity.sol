@@ -3,8 +3,8 @@ pragma solidity ^0.4.24;
 contract Student{
 
 	struct Course{
-		string university;
 		string name;
+		string university;
 	}
 
 	struct FinishedCourse{
