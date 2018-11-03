@@ -26,7 +26,7 @@ contract StudentsContract {
   */
   function CreateNewStudent(address studentAddress, string name, uint universityId) external {
     //Check if the university is the one trying to create it
-    require(msg.sender == university.owner);
+    require(msg.sender == uniMap[universityId]);
     university.students.push(Student(studentAddress, name, SubjectData[], SubjectData[], university));
   }
 
