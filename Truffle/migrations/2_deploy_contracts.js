@@ -1,7 +1,5 @@
-var DecentralizedUniversity = artifacts.require("DecentralizedUniversity");
-var University = artifacts.require("University");
+var Student = artifacts.require("Student");
 
 module.exports = function(deployer) {
-  deployer.deploy(DecentralizedUniversity);
-  deployer.deploy(University);
+  deployer.deploy(Student);
 };
