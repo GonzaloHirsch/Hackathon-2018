@@ -1,4 +1,4 @@
-contract Subject {
+contract SubjectContract {
 
   Administrator admin;
   function SetAdministrator(address _address){
@@ -15,7 +15,7 @@ contract Subject {
 	}
 }
 
-contract Student {
+contract StudentContract {
 
   Administrator admin;
   function SetAdministrator(address _address){
@@ -40,7 +40,7 @@ contract Student {
 	}
 }
 
-contract University {
+contract UniversityContract {
 
   Administrator admin;
   function SetAdministrator(address _address){
