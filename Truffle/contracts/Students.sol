@@ -34,7 +34,7 @@ contract StudentsContract {
   /*
     Function that creates a new subjectData and adds it to the students currentSubject.
   */
-  function CreateSubjectData(address studentAddress, uint subjectId, uint universityId, uint8 grade) internal{
+  function CreateSubjectData(address studentAddress, uint subjectId, uint universityId) internal{
     require(allUniversities[universityId] != 0);
     require(allUniversities[universityId].subjects[subjectId] != 0);
     require(allUniversities[universityId].walletToStudent[studentAddress] != 0);
