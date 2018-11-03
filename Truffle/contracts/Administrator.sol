@@ -8,7 +8,6 @@ contract AdministratorContract is Ownable{
   uint universityCount;
 
   function CreateUniversity(address owner, string name) external{
-    requ
   }
 
 
