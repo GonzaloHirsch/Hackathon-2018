@@ -1,8 +1,9 @@
-contract DecentralizedUniversity {
-  function theTest(address _address) public returns(string){
-    return University(_address).test();
-  }
+contract SubjectContract {
 
+  Administrator admin;
+  function SetAdministrator(address _address){
+    admin = Administrator(_address);
+  }
 
 	struct Subject{
 		address owner;
@@ -13,6 +14,13 @@ contract DecentralizedUniversity {
 		University university;
 	}
 }
+
+contract StudentContract {
+
+  Administrator admin;
+  function SetAdministrator(address _address){
+    admin = Administrator(_address);
+  }
 
 	struct Student{
 		address owner;
@@ -54,7 +62,11 @@ contract DecentralizedUniversity {
 	}
 }
 
+contract UniversityContract {
 
+  Administrator admin;
+  function SetAdministrator(address _address){
+    admin = Administrator(_address);
   }
 
 }
@@ -62,6 +74,7 @@ contract DecentralizedUniversity {
 <<<<<<< HEAD
 contract AdministratorContract {
 =======
+contract Administrator {
 >>>>>>> ebe7ec2d7dff93279bc2f51ea2b7a16a7dfb5eed
 
   University[] allUniversities;
@@ -80,7 +93,14 @@ contract AdministratorContract {
   function SetUniversityContract(address _address) {
     UniversityContract = University(_address);
   }
+  function SetAdministrator(){
+    UniversityContract.SetAdministrator(this);
+    StudentContract.SetAdministrator(this);
+    SubjectContract.SetAdministrator(this);
+  }
 
   function CreateUniversity(address _owner, string _name) external {
+  	//allUniversities[universityCount] = University(_owner, universityCount, new Subject[], 0, _name, new mapping (address => Student));
+  	//universityCount++;
   }
 }
