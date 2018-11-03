@@ -20,12 +20,4 @@ contract UniversityContract {
     subjects.push(Subject(name,SubjectCount, universities[universityID], contents, depth, subjectOwner));
     SubjectCount++;
   }
-
-
-
-
-
-
-
-
 }
