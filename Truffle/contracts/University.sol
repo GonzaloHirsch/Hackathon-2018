@@ -1,8 +1,10 @@
 pragma solidity ^0.4.23;
 
-import "./Structures.sol";
+import "./Subjects.sol";
+import "./Students.sol";
+import "./Administrator.sol";
 
-contract UniversityContract {
+contract University {
 
   struct University {
     address owner;
@@ -14,10 +16,10 @@ contract UniversityContract {
   }
 
   function createSubject(string name, uint universityID, string contents, uint16 depth, address subjectOwner) {
-    require(allUniversities[universityID] != 0);
-    require(msg.sender == allUniversities[universityID].owner);
+    require(AdministratorContract.allUniversities[universityID] != 0);
+    require(msg.sender == AdministratorContract.allUniversities[universityID].owner);
 
-    subjects.push(Subject(name,SubjectCount, universities[universityID], contents, depth, subjectOwner));
-    SubjectCount++;
+    AdministratorContract.allUniversities[universityID].subjects.push(Subject(name, AdministratorContract.allUniversities[universityID].SubjectCount, AdministratorContract.allUniversities[universityID], contents, depth, subjectOwner));
+    AdministratorContract.allUniversities[universityID].SubjectCount++;
   }
 }
