@@ -1,5 +1,6 @@
 pragma solidity ^0.4.23;
 
+<<<<<<< HEAD
 contract University {
 
   struct University {
@@ -11,3 +12,5 @@ contract University {
   }
 
 }
+=======
+>>>>>>> cb85908ca7be240a85947fdccc7cabb757f9afa9
