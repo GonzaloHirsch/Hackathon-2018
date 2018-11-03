@@ -2,6 +2,7 @@ pragma solidity ^0.4.23;
 
 import "./University.sol";
 import "./Ownable.sol";
+import "./Structures.sol";
 
 contract AdministratorContract is Ownable{
   University[] allUniversities;

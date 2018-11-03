@@ -3,6 +3,7 @@ pragma solidity ^0.4.23;
 import "./Subjects.sol";
 import "./University.sol";
 import "./Administrator.sol";
+import "./Structures.sol";
 
 contract StudentsContract {
 
