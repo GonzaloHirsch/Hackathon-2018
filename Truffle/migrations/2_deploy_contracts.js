@@ -1,8 +1,5 @@
-var University = artifacts.require("University");
-var Administrator = artifacts.require("Administrator");
+var DecentralizedUniversity = artifacts.require("DecentralizedUniversity");
 
 module.exports = function(deployer) {
-  deployer.deploy(University);
-  deployer.link(University, Administrator);
-  deployer.deploy(Administrator);
+  deployer.deploy(DecentralizedUniversity);
 };
