@@ -12,7 +12,7 @@ contract SubjectsContract {
   }
 
   function CreateNewSubject(string name, University university, string contents, uint16 depth, address subjectOwner) returns (Subject) {
-
+    
   }
 
 }
