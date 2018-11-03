@@ -4,8 +4,8 @@ import "./University.sol";
 
 contract Administrator {
 
-  function testUni(){
-    test();
+  function testUni() view public{
+    Universal.test();
   }
 
 }
