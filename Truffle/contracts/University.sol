@@ -1,8 +1,6 @@
-pragma solidity ^0.4.19
+pragma solidity ^0.4.23;
 
-import "./Subjects.sol";
 import "./Students.sol";
-import "./Administator.sol";
 
 contract UniversityContract {
 
