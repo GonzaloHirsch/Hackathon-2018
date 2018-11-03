@@ -1,15 +1,14 @@
 contract DecentralizedUniversity {
-
-  function testDe(address _address) public {
-    University(_address).test();
+  function theTest(address _address) public returns(string){
+    return University(_address).test();
   }
 
 }
 
 contract University {
 
-  function test() pure public returns(uint) {
-    return 1;
+  function test() pure public returns(string) {
+    return "IT MOTHER FUCKING WORKED";
   }
 
 }
